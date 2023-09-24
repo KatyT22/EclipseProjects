@@ -1,0 +1,9 @@
+package Templates;
+
+public class BinaryOperator {
+
+	public BinaryOperator() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

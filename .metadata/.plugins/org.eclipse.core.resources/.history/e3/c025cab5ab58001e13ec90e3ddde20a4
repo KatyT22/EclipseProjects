@@ -1,0 +1,46 @@
+package Templates;
+
+public class Project {
+	
+	private int tauxInteret;
+	private int dureeDeRemboursementEnMois;
+	private int montantInvesti;
+	
+	public Project(int tauxInteret, int dureeDeRemboursementEnMois, int montantInvesti) {
+		super();
+		this.tauxInteret = tauxInteret;
+		this.dureeDeRemboursementEnMois = dureeDeRemboursementEnMois;
+		this.montantInvesti = montantInvesti;
+	}
+	
+	public Project() {
+			// TODO Auto-generated constructor stub
+			
+	}
+
+	
+	public int getMontantInvesti() {
+		return montantInvesti;
+	}
+
+	public void setMontantInvesti(int montantInvesti) {
+		this.montantInvesti = montantInvesti;
+	}
+
+	public int getTauxInteret() {
+		return tauxInteret;
+	}
+
+	public void setTauxInteret(int tauxInteret) {
+		this.tauxInteret = tauxInteret;
+	}
+
+	public int getDureeDeRemboursementEnMois() {
+		return dureeDeRemboursementEnMois;
+	}
+
+	public void setDureeDeRemboursementEnMois(int dureeDeRemboursementEnMois) {
+		this.dureeDeRemboursementEnMois = dureeDeRemboursementEnMois;
+	}
+
+}

@@ -1,0 +1,38 @@
+package Templates;
+
+import java.util.List;
+
+public class TableauDeBord {
+
+	private Investor investor;
+
+	
+	public TableauDeBord(Investor investor) {
+		super();
+		this.investor = investor;
+	}
+
+	
+
+	
+	public void gainMensualites(int nombreDeMensualite, float montantInvesti, float tauxInteret, int frequenceDInvestissement, int dureeDeSimulationEnMois){
+	
+		float totalRevenu=0;
+		
+		for(int i=0; i<dureeDeSimulationEnMois; i++){
+			Project newProject = new Project(tauxInteret, nombreDeMensualite, montantInvesti);
+			investor.setCapitalAInvestir(investor.getCapitalAInvestir()-);
+			System.out.println( "---> Mois = "+(i+1)+" <---" );
+			for(Project p:investor.getProjetEnCours()){
+				investor.setCapitalAInvestir(investor.getCapitalAInvestir()+p.getRevenuParMensualite());
+				totalRevenu = totalRevenu+p.getRevenuParMensualite();
+			}
+			System.out.println( "-> Revenu = "+totalRevenu);
+			
+		}
+		
+
+	}
+	
+
+}

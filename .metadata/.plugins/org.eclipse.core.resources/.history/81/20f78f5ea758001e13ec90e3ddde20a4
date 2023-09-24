@@ -1,0 +1,9 @@
+package Templates;
+
+public class Investor {
+
+	public Investor() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

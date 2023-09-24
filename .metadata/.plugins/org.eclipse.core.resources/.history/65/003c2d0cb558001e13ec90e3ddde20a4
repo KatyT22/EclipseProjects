@@ -1,0 +1,53 @@
+package Templates;
+
+import java.util.List;
+
+public class TableauDeBord {
+
+	private Investor investor;
+
+	
+	public TableauDeBord(Investor investor) {
+		super();
+		this.investor = investor;
+	}
+
+	
+	/*private void createNewProject(int montantInvesti, int tauxInteret, int nombreDePartRembourseParProjet){
+		
+		investor.addNewProjectEnCours(new Project(tauxInteret, nombreDePartRembourseParProjet, montantInvesti));
+
+	}*/
+	
+	/**
+	 * calcul de gain pour un projet
+	 * @param montantAinvestir
+	 * @param tauxDinteretMoyen
+	 * @param nombreDeMensualite
+	 */
+	private float strategyUnMois(float montantAinvestir, float tauxDinteretMoyen, int nombreDeMensualite, Project p){
+		//montant gagné pour chaque projet investi
+		float interetParProjet = ((tauxDinteretMoyen/100)*montantAinvestir);
+		
+		float montantInvesti=0;
+		
+		System.out.println( "-> Capital "+ investor.getCapitalAInvestir());
+		if(investor.getCapitalAInvestir()>=20){
+			System.out.println( "-> Investissement sur un projet : +"+montantAinvestir);
+			montantInvesti=montantAinvestir;
+		}
+		investor.setCapitalAInvestir((investor.getCapitalAInvestir()-montantInvesti) + p.getRevenu());
+		System.out.println( "-> Revenu = "+p.getRevenu() );
+	}
+	
+	
+	public void strategy(int montantAinvestirParMois, int tauxDinteretMoyen, int nombreDePartRembourseParProjet, int nombreDeMoisInvesti){
+	
+		for(int i=0; i<nombreDeMoisInvesti; i++){
+			System.out.println( "---> Mois = "+(i+1)+" <---" );
+			strategyUnMois(montantAinvestirParMois, tauxDinteretMoyen, nombreDePartRembourseParProjet);
+		}
+
+	}
+
+}

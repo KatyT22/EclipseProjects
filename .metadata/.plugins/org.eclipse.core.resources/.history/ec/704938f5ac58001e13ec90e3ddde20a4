@@ -1,0 +1,41 @@
+package Templates;
+
+public class TableauDeBord {
+
+	private Investor investor;
+	private Project[] project;
+	
+	public TableauDeBord(Investor investor) {
+		super();
+		this.investor = investor;
+	}
+
+	
+	private Project createNewProject(int montantInvesti, int tauxInteret, int nombreDePartRembourseParProjet){
+		return new Project(tauxInteret, nombreDePartRembourseParProjet, montantInvesti);
+	}
+	/**
+	 * calcul de gain pour un projet
+	 * @param montantAinvestirParMois
+	 * @param tauxDinteretMoyen
+	 * @param nombreDePartRembourseParProjet
+	 */
+	private void strategyUnMois(int montantAinvestirParMois, int tauxDinteretMoyen, int nombreDePartRembourseParProjet){
+		
+		int interetParProjet = (tauxDinteretMoyen*montantAinvestirParMois/100);
+		
+		//if(investor.getCapitalAInvestir()>=20){
+			investor.setCapitalAInvestir((investor.getCapitalAInvestir()-montantAinvestirParMois) + ((montantAinvestirParMois+interetParProjet)/nombreDePartRembourseParProjet));
+		//}			
+	}
+	
+	
+	public void strategy(int montantAinvestirParMois, int tauxDinteretMoyen, int nombreDePartRembourseParProjet, int nombreDeMoisInvesti){
+	
+		for(int i=0; i<nombreDeMoisInvesti; i++){
+			strategyUnMois(montantAinvestirParMois, tauxDinteretMoyen, nombreDePartRembourseParProjet);
+		}
+
+	}
+
+}

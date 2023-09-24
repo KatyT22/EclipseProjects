@@ -1,0 +1,9 @@
+package com.invest.entity;
+
+public class TableauDeBord {
+
+	public TableauDeBord() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

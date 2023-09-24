@@ -1,0 +1,18 @@
+package $ProjectInvest.simulation;
+
+import com.invest.entity.Investor;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Entrez votre capital à investir" );
+        int capital = Integer.parseInt(scanner.nextLine());
+        
+        Investor myInvestor = new Investor(capital); 
+    }
+}

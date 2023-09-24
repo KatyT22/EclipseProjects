@@ -1,0 +1,51 @@
+package Templates;
+
+public class Project {
+	
+	private int tauxInteret;
+	private int nombreDeMensualite;
+	private int montantInvesti;
+	
+	public Project(int tauxInteret, int nombreDeMensualite, int montantInvesti) {
+		super();
+		this.tauxInteret = tauxInteret;
+		this.nombreDeMensualite = nombreDeMensualite;
+		this.montantInvesti = montantInvesti;
+	}
+	
+	public Project() {
+			// TODO Auto-generated constructor stub
+			
+	}
+
+	
+	public int getMontantInvesti() {
+		return montantInvesti;
+	}
+
+	public void setMontantInvesti(int montantInvesti) {
+		this.montantInvesti = montantInvesti;
+	}
+
+	public int getTauxInteret() {
+		return tauxInteret;
+	}
+
+	public void setTauxInteret(int tauxInteret) {
+		this.tauxInteret = tauxInteret;
+	}
+
+	public int getDureeDeRemboursementEnMois() {
+		return nombreDeMensualite;
+	}
+
+	public void setNombreDeMensualite(int nombreDeMensualite) {
+		this.nombreDeMensualite = nombreDeMensualite;
+	}
+
+	public float getRevenuParMensualite(){
+		float interetParProjet = ((tauxInteret/100)*montantInvesti);
+		return((montantInvesti+interetParProjet)/nombreDeMensualite);
+	}
+	
+}

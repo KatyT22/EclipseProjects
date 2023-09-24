@@ -1,0 +1,28 @@
+package com.invest.entity;
+
+public class TableauDeBord {
+
+	private Investor investor;
+	
+	public TableauDeBord(Investor investor) {
+		super();
+		this.investor = investor;
+	}
+
+
+	private int strategy(int montantAinvestirParMois, int tauxDinteretMoyen, int nombreDePartRembourseParProjet, int nombreDeMoisInvesti){
+		
+		int result =0;
+		int interetParProjet = (tauxDinteretMoyen*montantAinvestirParMois/100);
+		int cpaitalInvestisseur = investor.getCapitalAInvestir();
+		for(int i=0; i<nombreDeMoisInvesti; i++){
+			result = result + ((montantAinvestirParMois+interetParProjet)/nombreDePartRembourseParProjet);
+			if(result>=20){
+			}
+		}
+		
+		
+		return result;
+	}
+
+}

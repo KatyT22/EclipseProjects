@@ -1,0 +1,15 @@
+package $ProjectInvest.simulation;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Entrez votre capital à investir" );
+        int capital = Integer.parseInt(scanner.nextLine());
+        
+    }
+}

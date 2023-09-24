@@ -1,0 +1,34 @@
+package main;
+
+import Templates.Solution;
+
+public class Main {
+
+	public Main() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Solution.computeClosestToZero2(5526);
+		System.err.println("1*********************************************");
+		Solution.findNode();
+		System.err.println("2*********************************************");
+		Solution.largestNumber();
+		System.err.println("3*********************************************");
+		Solution.nextPosition();
+		System.err.println("4*********************************************");
+		Solution.ascii();
+		System.err.println("5*********************************************");
+		Solution.parentesis();
+		System.err.println("6*********************************************");
+		Solution.reverse();
+		System.err.println("7*********************************************");
+		Solution.search();
+		System.err.println("8*********************************************");
+		Solution.sortPackages();
+		System.err.println("9*********************************************");
+		Solution.billet();
+	}
+
+}
